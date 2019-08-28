@@ -1,0 +1,38 @@
+.center {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    position: absolute;
+}
+
+h4 {
+    color: blue;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+table {
+    margin: auto;
+    width: 50%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+}
+
+td {
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+p {
+    font-weight: bold;
+}
