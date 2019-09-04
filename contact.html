@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact me</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], [type=email] , textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        .container {
+            border-radius: 5px;
+            background-color: bisque;
+            padding: 20px;
+            width: 50%;
+        }
+
+        input[type=submit] {
+            background-color: #4caf50;
+            color: #ccc;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h3>Fill out this contact form below, and expect a response within 24hrs. thanks</h3>
+    <div class="container">
+            <form id="contactform" method="POST" action="result.php">
+                    
+                    <input type="text" id="name" name="name" placeholder="full name">
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="email address">
+                    <br>
+                    <input type="text" id="title" name="title" placeholder="title of message">
+                    <br>
+                    <textarea id="mesaage" name="message" placeholder="write your message.." style="height: 200px"></textarea>
+                    <br>
+                    <input type="submit" value="submit" >           
+            </form>
+    </div>
+    
+
+    <script>
+        
+        $('#submit').click(function() {
+            var name = document.getElementById('#name').value();
+            var email = document.getElementById('#email').value();
+            var title = document.getElementById('#title').value();
+            var message = document.getElementById('#message').value();
+        
+            $('#contactform').load('name'+name+'&email'+email+'&title'+title+'&message'+message);
+        
+
+        });
+    </script>
+</body>
+</html>
